@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+
+	<!--- basic page needs
+   ================================================== -->
+	<meta charset="utf-8">
+	<title>Hussain Raja</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- mobile specific metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+   ================================================== -->
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/vendor.css">
+
+	<!-- script
+   ================================================== -->
+	<script src="js/modernizr.js"></script>
+	<script src="js/pace.min.js"></script>
+
+	<!-- favicons
+	================================================== -->
+	<link rel="icon" type="image/png" href="favicon.png">
+
+</head>
+<script>
+	let slideIndex = 1;
+	showSlides(slideIndex);
+
+	// Next/previous controls
+	function plusSlides(n) {
+		showSlides(slideIndex += n);
+	}
+
+	// Thumbnail image controls
+	function currentSlide(n) {
+		showSlides(slideIndex = n);
+	}
+
+	function onModelClose(){
+		slideIndex = 1;
+		// let slides = document.getElementsByClassName("mySlides");
+		// let dots = document.getElementsByClassName("dot");
+		// dots[0].className.replace(" active", "")
+		// slides[0].style.display = "none";
+	}
+
+	function firstImageShow(n){
+		slideIndex = 1;
+		console.log("event fires")
+		let i;
+		let slides = document.getElementsByClassName("mySlides");
+		let dots = document.getElementsByClassName("dot");
+		// if (n > slides.length) { slideIndex = 1 }
+		// // if (n < 1) { slideIndex = slides.length }
+		// for (i = 1; i < slides.length; i++) {
+		// 	slides[i].style.display = "none";
+		// }
+		// for (i = 1; i < dots.length; i++) {
+		// 	dots[i].className = dots[i].className.replace(" active", "");
+		// }
+		slides[0].style.display = "block";
+		dots[0].className += " active";
+
+	}
+
+
+	function showSlides(n) {
+		let i;
+		let slides = document.getElementsByClassName("mySlides");
+		let dots = document.getElementsByClassName("dot");
+
+		// dots[0].className.replace(" active", "");
+		// slides[0].style.display = "none";
+		
+		if (n > slides.length) { slideIndex = 1 }
+		if (n < 1) { slideIndex = slides.length }
+		for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";
+		}
+		for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+		}
+		slides[slideIndex - 1].style.display = "block";
+		dots[slideIndex - 1].className += " active";
+
+	}
+
+		function downloadResume(){
+			// Replace 'resume.pdf' with the actual URL of your PDF resume
+            const resumeUrl = 'https://drive.google.com/file/d/1r6dct1UPcexf7-d0Qev8Jcd71Ow-KG6t/view?usp=drive_link';
+            const a = document.createElement('a');
+            a.href = resumeUrl;
+            a.download = 'HussainRaja.pdf';
+            a.target = '_blank'; 
+            a.click(); 
+		}
+
+
+</script>
+
+<body id="top">
+
+	<!-- header 
+   ================================================== -->
+	<header>
+		<div class="row">
+
+			<div class="top-bar">
+				<a class="menu-toggle" href="#"><span>Menu</span></a>
+
+				<!-- <div class="logo">
+		         <a href="index.html">Hussain</a>
+		      </div>		       -->
+
+				<nav id="main-nav-wrap">
+					<ul class="main-navigation">
+						<li class="current"><a class="smoothscroll" href="#intro" title="">Home</a></li>
+						<li><a class="smoothscroll" href="#about" title="">About</a></li>
+						<li><a class="smoothscroll" href="#resume" title="">Resume</a></li>
+						<li><a class="smoothscroll" href="#portfolio" title="">Portfolio</a></li>
+						<li><a class="smoothscroll" href="#services" title="">Services</a></li>
+						<li><a class="smoothscroll" href="#contact" title="">Contact</a></li>
+					</ul>
+				</nav>	
+			</div> <!-- /top-bar -->
+
+		</div> <!-- /row -->
+	</header> <!-- /header -->
+
+	<!-- intro section
+   ================================================== -->
+	<section id="intro">
+
+		<div class="intro-overlay"></div>
+
+		<div class="intro-content">
+			<div class="row">
+
+				<div class="col-twelve">
+
+					<h5 class="helloText hello">Hello.</h5>
+					<h1>I'm Hussain Raja</h1>
+
+					<p class="intro-position">
+						<span>MERN Stack developer></span>
+					</p>
+
+					<a class="button stroke smoothscroll" href="#about" title="">More About Me</a>
+
+				</div>
+
+			</div>
+		</div> <!-- /intro-content -->
+
+		<ul class="intro-social">
+			<li><a href="https://github.com/shahhussainraja" target="_blank"><i class="fa fa-github"></i></a></li>
+			<li><a href="https://www.linkedin.com/in/shahhussain-raja-b1bb3b254" target="_blank"><i
+						class="fa fa-linkedin-square"></i></a></li>
+		</ul> <!-- /intro-social -->
+
+	</section> <!-- /intro -->
+
+
+	<!-- about section
+   ================================================== -->
+	<section id="about">
+		<div class="row section-intro">
+			<div class="col-twelve">
+
+				<h5>About</h5>
+				<h1>Let me introduce myself.</h1>
+
+				<div class="intro-info">
+
+					<img src="images/profile-pic.jpg" alt="Profile Picture">
+
+					<p class="lead">I am Shah Hussain Raja - a hardworking, smart learner, and technology enthusiast.
+						Embracing new challenges, I seek to make a positive impact by utilizing my skills in innovative
+						solutions. Collaboration and adaptability are key as I continuously strive to learn and grow in
+						the ever-changing tech landscape.</p>
+				</div>
+
+			</div>
+		</div> <!-- /section-intro -->
+
+		<div class="row about-content">
+
+			<div class="col-six tab-full">
+
+				<h3>Profile</h3>
+				<p>Graduate software engineer with a strong foundation in full-stack development. Experienced in web
+					application development and code reviews. Quick learner with a passion for efficient solutions and
+					staying updated with industry trends. </p>
+
+				<ul class="info-list">
+					<li>
+						<strong>Fullname:</strong>
+						<span>Shah hussain Raja</span>
+					</li>
+					<li>
+						<strong>Birth Date:</strong>
+						<span>June 18, 1999</span>
+					</li>
+					<li>
+						<strong>Job Experience</strong>
+						<span>Freelancer, MERN stack Developer</span>
+						<span class="job_experience">MERN stack Intern,PITB Punjab</span>
+					</li>
+					<li>
+						<strong>Email:</strong>
+						<span>im.hussainraja@gmail.com</span>
+					</li>
+
+				</ul> <!-- /info-list -->
+
+			</div>
+
+			<div class="col-six tab-full">
+
+				<h3>Skills</h3>
+				<p>Competent in HTML, CSS, Tailwind CSS, React, Node.js, Express.js, MongoDB, SQL, and AWS services. I
+					am a quick learner, adept at problem-solving, and value clean coding practices. My strong teamwork
+					and communication skills contribute to seamless collaboration on projects. </p>
+
+				<ul class="skill-bars">
+					<li>
+						<div class="progress percent65"><span>65%</span></div>
+						<strong>JavaScript</strong>
+					</li>
+					<li>
+						<strong>Java</strong>
+						<div class="progress percent75"><span>75%</span></div>
+					</li>
+					<li>
+						<div class="progress percent70"><span>70%</span></div>
+						<strong>html/css/Tailwind</strong>
+					</li>
+					<li>
+						<div class="progress percent60"><span>60%</span></div>
+						<strong>node.js/Express</strong>
+					</li>
+					<li>
+						<div class="progress percent60"><span>60%</span></div>
+						<strong>mongodb/sql</strong>
+					</li>
+
+
+				</ul> <!-- /skill-bars -->
+
+			</div>
+
+		</div>
+
+		<div class="row button-section">
+			<div class="col-twelve">
+				<a href="https://www.upwork.com/freelancers/~0191f9005f3a1d7e62" target="_blank" title="Hire Me" class="button stroke">Hire Me</a>
+				<button title="Download CV" class="button button-primary" onclick="downloadResume()" >Download CV</button>
+			</div>
+		</div>
+
+	</section> <!-- /process-->
+
+
+	<!-- resume Section
+   ================================================== -->
+	<section id="resume" class="grey-section">
+
+		<div class="row section-intro">
+			<div class="col-twelve">
+
+				<h5>Resume</h5>
+
+				<p class="lead">Work Experience and Educational Background</p>
+
+			</div>
+		</div>
+		<!-- /section-intro-->
+
+		<div class="row resume-timeline">
+
+			<div class="col-twelve resume-header">
+
+				<h2>Work Experience</h2>
+
+			</div> <!-- /resume-header -->
+
+			<div class="col-twelve">
+
+				<div class="timeline-wrap">
+
+					<div class="timeline-block">
+
+						<div class="timeline-ico">
+							<i class="fa fa-building"></i>
+						</div>
+
+						<div class="timeline-header">
+							<h3>Mern stack developer</h3>
+							<h6>brain stack,Australia</h6>
+							<p>Jan 2023 - Present</p>
+						</div>
+
+						<div class="timeline-content">
+							<h4>Brain stack.au</h4>
+							<p>An AI-powered Career Counseling MERN (MongoDB, Express, React, Node.js) Stack
+								Application. It includes a career assessment AI, a comprehensive career database, user
+								profiles for personalized recommendations, and educational guidance. The platform aims
+								to help individuals make informed career decisions using the power of AI and MERN
+								technologies.</p>
+						</div>
+
+					</div> <!-- /timeline-block -->
+
+					<div class="timeline-block">
+
+						<div class="timeline-ico">
+							<i class="fa fa-building"></i>
+						</div>
+
+						<div class="timeline-header">
+							<h3>MERN stack developer</h3>
+							<h4>Intern</h4>
+							<p>July 2022 - Sept 2022</p>
+						</div>
+
+						<div class="timeline-content">
+							<h4>Pakistan Information Technology Board,Lahore</h4>
+							<p>During my internship at PITB as a MERN Stack Developer, I contributed to real-world
+								projects, gained experience in MERN development, collaborated with a skilled team, and
+								honed my problem-solving abilities by fixing bugs and troubleshooting issues.</p>
+						</div>
+
+					</div> <!-- /timeline-block -->
+
+				</div> <!-- /timeline-wrap -->
+
+			</div> <!-- /col-twelve -->
+
+		</div> <!-- /resume-timeline -->
+
+		<div class="row resume-timeline">
+
+			<div class="col-twelve resume-header">
+
+				<h2>Education</h2>
+
+			</div> <!-- /resume-header -->
+
+			<div class="col-twelve">
+
+				<div class="timeline-wrap">
+
+					<div class="timeline-block">
+
+						<div class="timeline-ico">
+							<i class="fa fa-briefcase"></i>
+						</div>
+
+						<div class="timeline-header">
+							<h3>Software Engineering</h3>
+							<p>July 2023</p>
+						</div>
+
+						<div class="timeline-content">
+							<h4>COMSATS university,Lahore Campus</h4>
+							<p>
+								I hold a Bachelor's degree in Software Engineering from Comsats University with a CGPA
+								of 3.05. I gained valuable theoretical knowledge, analytical skills, and practical
+								experience through various projects and extracurricular activities.</p>
+						</div>
+
+					</div> <!-- /timeline-block -->
+
+				</div> <!-- /timeline-block -->
+
+
+			</div> <!-- /timeline-block -->
+
+		</div> <!-- /timeline-wrap -->
+
+		</div> <!-- /col-twelve -->
+
+		</div> <!-- /resume-timeline -->
+
+	</section> <!-- /features -->
+
+
+	<!-- Portfolio Section
+   ================================================== -->
+	<section id="portfolio">
+
+		<div class="row section-intro">
+			<div class="col-twelve">
+
+				<h5>Portfolio</h5>
+				<h1>Check Out Some of My Works.</h1>
+
+			</div>
+		</div> <!-- /section-intro-->
+
+		<div class="row portfolio-content">
+
+			<div class="col-twelve">
+
+				<!-- portfolio-wrapper -->
+				<div id="folio-wrapper" class="block-1-2 block-mob-full stack" onclick="firstImageShow()">
+
+					<div class="bgrid folio-item">
+						<div class="item-wrap">
+							<img src="images/project1/1.png" alt="Bespoke">
+							<a href="#modal-01" class="overlay">
+								<div class="folio-item-table">
+									<div class="folio-item-cell">
+										<h3 class="folio-title">Bespoke</h3>
+										<span class="folio-types">
+											MERN stack Application
+										</span>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div> <!-- /folio-item -->
+
+					<div class="bgrid folio-item">
+						<div class="item-wrap">
+							<img src="images/project2/2.png" alt="Ecommerce Admin Dashboard">
+							<a href="#modal-02" class="overlay">
+								<div class="folio-item-table">
+									<div class="folio-item-cell">
+										<h3 class="folio-title">Ecommerce Admin Dashboard</h3>
+										<span class="folio-types">
+											MERN stack Application
+										</span>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div> <!-- /folio-item -->
+
+					<div class="bgrid folio-item">
+						<div class="item-wrap">
+							<img src="images/project3/1.png" alt="AI Career Counseling">
+							<a href="#modal-03" class="overlay">
+								<div class="folio-item-table">
+									<div class="folio-item-cell">
+										<h3 class="folio-title">AI Career Counseling</h3>
+										<span class="folio-types">
+											MERN stack Application
+										</span>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div> <!-- /folio-item -->
+
+					<div class="bgrid folio-item" >
+						<div class="item-wrap">
+							<img src="images/Project4/2.png" alt="SE DOCS">
+							<a href="#modal-04" class="overlay" >
+								<div class="folio-item-table">
+									<div class="folio-item-cell">
+										<h3 class="folio-title">SE DOCS </h3>
+										<span class="folio-types">
+											MERN stack Application
+										</span>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div> <!-- /folio-item -->
+
+
+					<!-- modal popups - begin
+	            ============================================================= -->
+
+					<!-- project1 -->
+
+					<div id="modal-01" class="popup-modal slider mfp-hide">
+
+						<!-- <div class="media">
+				     		<img src="images/portfolio/modals/m-liberty.jpg" alt="" />
+				     	</div>      	 -->
+
+						<!-- slider code -->
+						<div class="slideshow-container">
+
+							<!-- Full-width images with number and caption text -->
+							<div class="mySlides fade">
+								<div class="numbertext">1 / 6</div>
+								<img src="images/project1/1.png" class="media">
+							</div>
+
+							<div class="mySlides fade">
+								<div class="numbertext">2 / 6</div>
+								<img src="images/project1/2.png" sclass="media">
+							</div>
+
+							<div class="mySlides fade">
+								<div class="numbertext">3 / 6</div>
+								<img src="images/project1/3.png" class="media">
+							</div>
+							<div class="mySlides fade">
+								<div class="numbertext">4 / 6</div>
+								<img src="images/project1/4.png" class="media">
+							</div>
+							<div class="mySlides fade">
+								<div class="numbertext">5 / 6</div>
+								<img src="images/project1/5.png" class="media">
+							</div>
+
+							<div class="mySlides fade">
+								<div class="numbertext">6 / 6</div>
+								<img src="images/project1/6.png" class="media">
+							</div>
+
+							<!-- Next and previous buttons -->
+								<!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+								<a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+						</div>
+						<br>
+
+						<!-- The dots/circles -->
+						<div style="text-align:center">
+							<span class="dot" onclick="currentSlide(1)"></span>
+							<span class="dot" onclick="currentSlide(2)"></span>
+							<span class="dot" onclick="currentSlide(3)"></span>
+							<span class="dot" onclick="currentSlide(4)"></span>
+							<span class="dot" onclick="currentSlide(5)"></span>
+							<span class="dot" onclick="currentSlide(6)"></span>
+						</div>
+
+						<!-- slider code -->
+
+						<div class="description-box">
+							<h4>Bespoke</h4>
+							<p>Bespoke is a customizable e-commerce platform with a React Front-End, Redux Toolkit, and
+								JWT-based authentication. It offers real-time chat with Socket.io, an Admin Panel for
+								vendors, Stripe integration with WebHooks, and a Restful API using Node+Express with
+								MongoDB and route protection. The platform includes a bidding system for customized
+								products.</p>
+							<div class="categories">Web Development</div>
+						</div>
+
+						<div class="link-box">
+							<a href="#" class="popup-modal-dismiss" onclick="onModelClose()">Close</a>
+						</div>
+					</div> <!-- /modal-01 -->
+
+					<!--project 2  -->
+					<div id="modal-02" class="popup-modal slider mfp-hide">
+
+						<!-- <div class="media">
+							<img src="images/portfolio/modals/m-shutterbug.jpg" alt="" />
+						</div> -->
+
+
+						<!-- slider code -->
+						<div class="slideshow-container">
+
+							<!-- Full-width images with number and caption text -->
+							<div class="mySlides fade">
+								<div class="numbertext">1 / 4</div>
+								<img src="images/project2/1.png" class="media">
+							</div>
+
+							<div class="mySlides fade">
+								<div class="numbertext">2 / 4</div>
+								<img src="images/project2/2.png" sclass="media">
+							</div>
+
+							<div class="mySlides fade">
+								<div class="numbertext">3 / 4</div>
+								<img src="images/project2/3.png" class="media">
+							</div>
+
+							<div class="mySlides fade">
+								<div class="numbertext">4 / 4</div>
+								<img src="images/project2/4.png" class="media">
+							</div>
+
+							<!-- Next and previous buttons -->
+							<!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+							<a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+						</div>
+						<br>
+
+						<!-- The dots/circles -->
+						<div style="text-align:center">
+							<span class="dot" onclick="currentSlide(1)"></span>
+							<span class="dot" onclick="currentSlide(2)"></span>
+							<span class="dot" onclick="currentSlide(3)"></span>
+							<span class="dot" onclick="currentSlide(4)"></span>
+						</div>
+
+						<!-- slider code -->
+
+						<div class="description-box">
+							<h4>Ecommerce Admin Dashboard</h4>
+							<p>Admin Dashboard with a React Front-End, Redux Toolkit, and JWT-based
+								authentication.Node.js/Express backends with Aggregate pipeline of Mongodb for data
+								Analysis. </p>
+
+							<div class="categories">Web Development</div>
+						</div>
+
+						<div class="link-box">
+							<a href="#" class="popup-modal-dismiss" onclick="onModelClose()">Close</a>
+						</div>
+					</div> <!-- /modal-02 -->
+
+
+
+
+					<!-- project 3 -->
+					<div id="modal-03" class="popup-modal slider mfp-hide">
+
+						<!-- <div class="media">
+							<img src="images/portfolio/modals/m-clouds.jpg" alt="" />
+						</div> -->
+
+						<!-- slider code -->
+						<div class="slideshow-container">
+
+							<!-- Full-width images with number and caption text -->
+							<div class="mySlides fade">
+								<div class="numbertext">1 / 4</div>
+								<img src="images/project3/1.png" class="media">
+							</div>
+
+							<div class="mySlides fade">
+								<div class="numbertext">2 / 4</div>
+								<img src="images/project3/2.png" sclass="media">
+							</div>
+
+							<div class="mySlides fade">
+								<div class="numbertext">3 / 4</div>
+								<img src="images/project3/3.png" class="media">
+							</div>
+							<div class="mySlides fade">
+								<div class="numbertext">4 / 4</div>
+								<img src="images/project3/4.png" class="media">
+
+
+								<!-- Next and previous buttons -->
+								<!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+								<a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+							</div>
+							<br>
+
+							<!-- The dots/circles -->
+							<div style="text-align:center">
+								<span class="dot" onclick="currentSlide(1)"></span>
+								<span class="dot" onclick="currentSlide(2)"></span>
+								<span class="dot" onclick="currentSlide(3)"></span>
+								<span class="dot" onclick="currentSlide(4)"></span>
+							</div>
+
+							<!-- slider code -->
+
+							<div class="description-box">
+								<h4>AI Education & career Counseling</h4>
+								<p>AI Education & career Counseling with ChatGPT fine-tuning model integrated with Node.js and Express
+									backend. The front-end was built using React and Tailwind CSS, with state management
+									through Redux Toolkit. The application includes secure Login/Register authentication
+									with email verification and utilizes a Restful API with Node.js, Express, and
+									MongoDB for seamless data handling.</p>
+
+								<div class="categories">Web Development</div>
+							</div>
+
+							<div class="link-box" onclick="onModelClose()">
+								<a href="#" class="popup-modal-dismiss" >Close</a>
+							</div>
+
+						</div> <!-- /modal-03 -->
+
+
+						<!-- project 4 -->
+						<div id="modal-04" class="popup-modal slider mfp-hide">
+
+							<!-- <div class="media">
+							<img src="images/portfolio/modals/m-beetle.jpg" alt="" />
+						</div> -->
+
+
+							<!-- slider code -->
+							<div class="slideshow-container">
+
+								<!-- Full-width images with number and caption text -->
+								<div class="mySlides fade">
+									<div class="numbertext">1 / 4</div>
+									<img src="images/project4/1.png" class="media">
+								</div>
+
+								<div class="mySlides fade">
+									<div class="numbertext">2 / 4</div>
+									<img src="images/project4/2.png" sclass="media">
+								</div>
+
+								<div class="mySlides fade">
+									<div class="numbertext">3 / 4</div>
+									<img src="images/project4/3.png" class="media">
+								</div>
+								<div class="mySlides fade">
+									<div class="numbertext">4 / 4</div>
+									<img src="images/project4/4.png" class="media">
+
+
+									<!-- Next and previous buttons -->
+									<!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+									<a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+								</div>
+								<br>
+
+								<!-- The dots/circles -->
+								<div style="text-align:center">
+									<span class="dot" onclick="currentSlide(1)"></span>
+									<span class="dot" onclick="currentSlide(2)"></span>
+									<span class="dot" onclick="currentSlide(3)"></span>
+									<span class="dot" onclick="currentSlide(4)"></span>
+								</div>
+
+								<!-- slider code -->
+
+
+								<div class="description-box">
+									<h4>Project Management Web application</h4>
+									<p>
+										During my PITB internship, I created SE Docs, a secure MERN stack project management app with authentication, authorization, form handling, and seamless collaboration features. It is integrated with a Node.js backend using SQL for efficient data management.</p>
+
+									<div class="categories">Web Development</div>
+								</div>
+
+								<div class="link-box" >
+									<a href="#" class="popup-modal-dismiss" onclick="onModelClose()">Close</a>
+								</div>
+
+							</div> <!-- /modal-04 -->
+
+							<!-- <div id="modal-05" class="popup-modal slider mfp-hide">
+
+								<div class="media">
+									<img src="images/portfolio/modals/m-lighthouse.jpg" alt="" />
+								</div>
+
+								<div class="description-box">
+									<h4>Lighthouse</h4>
+									<p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis
+										bibendum
+										auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+
+									<div class="categories">Web Development</div>
+								</div>
+
+								<div class="link-box">
+									<a href="http://www.behance.net">Details</a>
+									<a href="#" class="popup-modal-dismiss">Close</a>
+								</div>
+
+							</div> /modal-05 -->
+<!-- 
+							<div id="modal-06" class="popup-modal slider mfp-hide">
+
+								<div class="media">
+									<img src="images/portfolio/modals/m-salad.jpg" alt="" />
+								</div>
+
+								<div class="description-box">
+									<h4>Salad</h4>
+									<p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis
+										bibendum
+										auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+
+									<div class="categories">Branding</div>
+								</div>
+
+								<div class="link-box">
+									<a href="http://www.behance.net">Details</a>
+									<a href="#" class="popup-modal-dismiss">Close</a>
+								</div>
+
+							</div> /modal-06 -->
+
+
+							<!-- modal popups - end
+	            ============================================================= -->
+
+						</div> <!-- /portfolio-wrapper -->
+
+					</div> <!-- /twelve -->
+
+				</div> <!-- /portfolio-content -->
+
+	</section> <!-- /portfolio -->
+
+
+	<!-- CTA Section
+   ================================================== -->
+	<!-- <section id="cta" class="grey-section">
+
+		<div class="row cta-content">
+
+			<div class="col-twelve section-ads">
+
+				<h2 class="h01"><a href="http://www.dreamhost.com/r.cgi?287326|STYLESHOUT">Styleshout Recommends
+						Dreamhost.</a></h2>
+
+				<p class="lead">
+					Looking for an awesome and reliable webhosting? Try <a
+						href="http://www.dreamhost.com/r.cgi?287326|STYLESHOUT"><span>DreamHost</span></a>.
+					Get <span>$50 off</span> when you sign up with the promocode <span>styleshout</span>.
+					Simply type	the promocode in the box labeled “Promo Code” when placing your order. -->
+				<!-- </p>
+
+				<div class="action">
+					<a class="button button-primary large" href="http://www.dreamhost.com/r.cgi?287326|STYLESHOUT">Sign
+						Up Now</a>
+				</div>
+
+			</div> -->
+
+		<!-- </div> /cta-content -->
+
+	<!-- </section> /cta -->
+
+
+	<!-- services Section
+   ================================================== -->
+	<section id="services">
+
+		<div class="overlay"></div>
+
+		<div class="row section-intro">
+			<div class="col-twelve">
+
+				<h5>Services</h5>
+				<h1>What Can I Do For You?</h1>
+
+			</div>
+		</div> <!-- /section-intro -->
+
+		<div class="row services-content">
+
+			<div id="owl-slider" class="owl-carousel services-list">
+
+
+
+				<div class="service">
+
+					<span class="icon"><i class="icon-toggles"></i></span>
+
+					<div class="service-content">
+
+						<h3>UI/UX Design</h3>
+
+						<p class="desc">I offer you top-notch web design solutions crafted through the powerful platform of Figma. Whether you are a business owner seeking an appealing online presence or an individual with a unique project in mind.
+						</p>
+
+					</div>
+
+				</div> <!-- /service -->
+
+
+				<div class="service">
+
+					<span class="icon"><i class="icon-window"></i></span>
+
+					<div class="service-content">
+
+						<h3>Web Development</h3>
+
+						<p class="desc"> I offer comprehensive web application solutions using MongoDB, Express.js, React, and Node.js. With a focus on close collaboration and personalized results, I deliver secure, scalable, and visually appealing web applications tailored to your unique requirements.
+						</p>
+
+					</div>
+
+				</div> <!-- /service -->
+
+				<div class="service">
+
+					<span class="icon"><i class="icon-pie-chart"></i></span>
+
+					<div class="service-content">
+
+						<h3>Database Management</h3>
+
+						<p class="desc">I have experience in handling both MongoDB and SQL databases. Whether you need a flexible and scalable solution with MongoDB or a structured querying approach with SQL,
+						</p>
+
+					</div>
+
+				</div> <!-- /service -->
+
+				
+
+				
+
+
+				
+
+			</div> <!-- /services-list -->
+
+		</div> <!-- /services-content -->
+
+	</section> <!-- /services -->
+
+
+	<!-- stats Section
+   ================================================== -->
+	<!-- <section id="stats" class="count-up">
+
+		<div class="row">
+			<div class="col-twelve">
+
+				<div class="block-1-6 block-s-1-3 block-tab-1-2 block-mob-full stats-list">
+
+					<div class="bgrid stat">
+
+						<div class="icon-part">
+							<i class="icon-pencil-ruler"></i>
+						</div>
+
+						<h3 class="stat-count">
+							1500
+						</h3>
+
+						<h5 class="stat-title">
+							Projects Completed
+						</h5>
+
+					</div> 
+
+					<div class="bgrid stat">
+
+						<div class="icon-part">
+							<i class="icon-users"></i>
+						</div>
+
+						<h3 class="stat-count">
+							900
+						</h3>
+
+						<h5 class="stat-title">
+							Happy Clients
+						</h5>
+
+					</div> 
+
+					<div class="bgrid stat">
+
+						<div class="icon-part">
+							<i class="icon-badge"></i>
+						</div>
+
+						<h3 class="stat-count">
+							200
+						</h3>
+
+						<h5 class="stat-title">
+							Awards Received
+						</h5>
+
+					</div> 
+
+					<div class="bgrid stat">
+
+						<div class="icon-part">
+							<i class="icon-light-bulb"></i>
+						</div>
+
+						<h3 class="stat-count">
+							120
+						</h3>
+
+						<h5 class="stat-title">
+							Crazy Ideas
+						</h5>
+
+					</div> 
+					<div class="bgrid stat">
+
+						<div class="icon-part">
+							<i class="icon-cup"></i>
+						</div>
+
+						<h3 class="stat-count">
+							1500
+						</h3>
+
+						<h5 class="stat-title">
+							Coffee Cups
+						</h5>
+
+					</div> 
+
+					<div class="bgrid stat">
+
+						<div class="icon-part">
+							<i class="icon-clock"></i>
+						</div>
+
+						<h3 class="stat-count">
+							7200
+						</h3>
+
+						<h5 class="stat-title">
+							Hours
+						</h5>
+
+					</div> 
+
+				</div> 
+
+			</div> 
+		</div> 
+
+	</section>  -->
+
+
+	<!-- contact
+   ================================================== -->
+	<section id="contact">
+
+		<div class="row section-intro">
+			<div class="col-twelve">
+
+				<h5>Contact </h5>
+				<h1>I'd Love To Hear From You.</h1>
+
+			</div>
+		</div> <!-- /section-intro -->
+
+		<div class="row contact-form">
+
+			<div class="col-twelve">
+
+				<!-- form -->
+				<form name="contactForm" id="contactForm" method="post" action="">
+					<fieldset>
+
+						<div class="form-field">
+							<input name="contactName" type="text" id="contactName" placeholder="Name" value=""
+								minlength="2" required="">
+						</div>
+						<div class="form-field">
+							<input name="contactEmail" type="email" id="contactEmail" placeholder="Email" value=""
+								required="">
+						</div>
+						<div class="form-field">
+							<input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value="">
+						</div>
+						<div class="form-field">
+							<textarea name="contactMessage" id="contactMessage" placeholder="message" rows="10"
+								cols="50" required=""></textarea>
+						</div>
+						<div class="form-field">
+							<button class="submitform">Submit</button>
+							<div id="submit-loader">
+								<div class="text-loader">Sending...</div>
+								<div class="s-loader">
+									<div class="bounce1"></div>
+									<div class="bounce2"></div>
+									<div class="bounce3"></div>
+								</div>
+							</div>
+						</div>
+
+					</fieldset>
+				</form> <!-- Form End -->
+
+				<!-- contact-warning -->
+				<div id="message-warning">
+				</div>
+				<!-- contact-success -->
+				<div id="message-success">
+					<i class="fa fa-check"></i>Your message was sent, thank you!<br>
+				</div>
+
+			</div> <!-- /col-twelve -->
+
+
+			
+		</div> <!-- /contact-form -->
+
+		<div class="row contact-info">
+
+			<div class="col-four tab-full">
+
+				<div class="icon">
+					<i class="icon-pin"></i>
+				</div>
+
+				<h5>Where to find me</h5>
+
+				<p>
+					Johar Town<br>
+					Lahore, Pakistan
+				</p>
+
+			</div>
+
+			<div class="col-four tab-full collapse">
+
+				<div class="icon">
+					<i class="icon-mail"></i>
+				</div>
+
+				<h5>Email Me At</h5>
+
+				<p>im.hussainraja@gmail.com<br>
+					
+				</p>
+
+			</div>
+
+			<div class="col-four tab-full">
+
+				<div class="icon">
+					<i class="icon-phone"></i>
+				</div>
+
+				<h5>Call Me At</h5>
+
+				<p>Mobile: (+92) 304 6013530 <br />	
+				</p>
+
+			</div>
+
+		</div> <!-- /contact-info -->
+
+	</section> <!-- /contact -->
+
+
+	<!-- footer
+   ================================================== -->
+
+	<footer>
+		<div class="row">
+
+			<!-- <div class="col-six tab-full pull-right social">
+
+				<ul class="footer-social">
+					<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="#"><i class="fa fa-behance"></i></a></li>
+					<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+					<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+					<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+				</ul>
+
+			</div> -->
+
+			<div class="col-eight tab-full">
+				<div class="copyright">
+					<span>© Copyright 2023 </span>
+					<span>Design by Shah Hussain raja</span>
+				</div>
+			</div>
+
+			<div id="go-top">
+				<a class="smoothscroll" title="Back to Top" href="#top"><i class="fa fa-long-arrow-up"></i></a>
+			</div>
+
+		</div> <!-- /row -->
+	</footer>
+
+	<div id="preloader">
+		<div id="loader"></div>
+	</div>
+
+	<!-- Java Script
+   ================================================== -->
+	<script src="js/jquery-2.1.3.min.js"></script>
+	<script src="js/plugins.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>
